@@ -1,5 +1,5 @@
-# Basic Fantasy RPG Dungeon Dressing Generator (Items.py)
-# Copyright 2008 Chris Gonnerman
+# Basic Fantasy RPG Dungeoneer Suite
+# Copyright 2007-2012 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

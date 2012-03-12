@@ -1,5 +1,5 @@
-# Basic Fantasy RPG NPC Spell Generator (spells.py)
-# Copyright 2008-2011 Chris Gonnerman
+# Basic Fantasy RPG Dungeoneer Suite
+# Copyright 2007-2012 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

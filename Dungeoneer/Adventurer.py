@@ -1,5 +1,5 @@
-# Basic Fantasy RPG NPC Adventurer Generator (Adventurer.py)
-# Copyright 2007-2011 Chris Gonnerman
+# Basic Fantasy RPG Dungeoneer Suite
+# Copyright 2007-2012 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
