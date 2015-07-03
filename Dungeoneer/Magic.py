@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2015 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -315,20 +315,11 @@ _shield_adjustment_table = [
     ( 5, "Cursed", _cursed_armor_table),
 ]
 
-_shield_table = [
-    (20, "Buckler Shield %s", _shield_adjustment_table, _typify),
-    (20, "Small Shield %s", _shield_adjustment_table, _typify),
-    (50, "Medium Shield %s", _shield_adjustment_table, _typify),
-    (10, "Large Shield %s", _shield_adjustment_table, _typify),
-]
-
 _armor_type_table = [
-    ( 7, "Leather Armor %s", _armor_adjustment_table, _typify),
-    ( 5, "Studded Leather Armor %s", _armor_adjustment_table, _typify),
-    (18, "Chain Mail %s", _armor_adjustment_table, _typify),
-    (13, "Plate Mail %s", _armor_adjustment_table, _typify),
-    ( 2, "Full Plate Armor %s", _armor_adjustment_table, _typify),
-    (54, "Shield", _shield_table),
+    ( 9, "Leather Armor %s", _armor_adjustment_table, _typify),
+    (19, "Chain Mail %s", _armor_adjustment_table, _typify),
+    (15, "Plate Mail %s", _armor_adjustment_table, _typify),
+    (57, "Shield %s", _shield_adjustment_table, _typify),
 ]
 
 _wpn_armor_table = [
