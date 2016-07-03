@@ -467,26 +467,24 @@ class Character:
             eligible = []
             if self.stats[4] >= 9:
                 if self.clas != 2:
-                    eligible.append("d")
+                    eligible.append("Dwarf")
             if self.stats[1] >= 9:
-                eligible.append("e")
+                eligible.append("Elf")
             if self.stats[3] >= 9:
                 if self.clas != 2:
-                    eligible.append("h")
+                    eligible.append("Halfling")
             if eligible:
                 race = random.choice(eligible)
-                if race == "d":
+                if race == "Dwarf":
                     if self.stats[5] > 17:
                         self.stats[5] = 17
-                    self.race = "Dwarf"
-                if race == "e":
+                if race == "Elf":
                     if self.stats[4] > 17:
                         self.stats[4] = 17
-                    self.race = "Elf"
-                if race == "h":
+                if race == "Halfling":
                     if self.stats[0] > 17:
                         self.stats[0] = 17
-                    self.race = "Halfling"
+                self.race = race
 
         self.hp = self.rollhp()
 
