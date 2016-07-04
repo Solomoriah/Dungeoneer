@@ -419,7 +419,7 @@ monsters = {
         "sv": "F3",
         "ml": 12,
         "tt": "None",
-        "dungeonlevel": (2, 4),
+        "dungeonlevel": (2, 3, 4),
     },
     "Green Slime": {
         "name": "Green Slime",
@@ -436,7 +436,7 @@ monsters = {
         "tt": "None",
         "dungeonlevel": 1,
     },
-    "Hellhound": {
+    "Hellhound, 4 HD": {
         "name": "Hellhound",
         "ac": 15,
         "daggers": 0,
@@ -465,6 +465,21 @@ monsters = {
         "ml": 8,
         "tt": ("D", "K"),
         "dungeonlevel": 2,
+    },
+    "Hydra, 5 Headed": {
+        "name": "Hydra, 5 Headed",
+        "ac": 17,
+        "daggers": 0,
+        "asterisk": 0,
+        "hd": (5, 8, 0),
+        "noatt": "5 bites",
+        "dam": "1d10 per bite",
+        "mv": "40' (10')",
+        "noapp": (0, 0, 1),
+        "sv": "F5",
+        "ml": 9,
+        "tt": "B",
+        "dungeonlevel": None,
     },
     "Hydra, 6 Headed": {
         "name": "Hydra, 6 Headed",
