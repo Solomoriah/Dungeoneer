@@ -1263,7 +1263,7 @@ monsters = {
         "sv": "F8",
         "ml": 11,
         "tt": "F",
-        "dungeonlevel": 8,
+        "dungeonlevel": 0,
     },
     "Vampire, 9 HD": {
         "name": "Vampire",
@@ -1279,7 +1279,7 @@ monsters = {
         "sv": "F9",
         "ml": 11,
         "tt": "F",
-        "dungeonlevel": 8,
+        "dungeonlevel": 0,
     },
     "Wight": {
         "name": "Wight",
