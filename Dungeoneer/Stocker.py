@@ -36,7 +36,7 @@ import Treasure, Dice, Adventurer, NPCs, Items, Traps, Monsters
 adventurer = Adventurer.generate
 bandit = NPCs.generate
 
-version = "Version 1.0 (Core Rules Release 74)"
+version = "Version 1.1 (Core Rules Release 107 - Provisional)"
 
 ##############################################################################
 #  Tables and Supporting Functions
@@ -128,7 +128,7 @@ def trap_fn(row, level):
         treasure = " with Treasure: %s" % string.join(trlst, ", ")
     return trap + treasure
 
-statblock_fmt = "%(num)s %(name)s: AC %(ac)s, HD %(hd)s, #At %(noatt)s, Dam %(dam)s, Mv %(mv)s, Sv %(sv)s, Ml %(ml)s"
+statblock_fmt = "%(num)s %(name)s: AC %(ac)s, HD %(hitdice)s, #At %(noatt)s, Dam %(dam)s, Mv %(mv)s, Sv %(sv)s, Ml %(ml)s"
 
 def monster_fn(row, level):
     level = min(level, 8)
