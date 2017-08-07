@@ -301,13 +301,12 @@ potiontable = [
     0,
     [ 3, "Clairaudience", -1 ],
     [ 4, "Clairvoyance", -1 ],
-    [ 3, "Control Animal", -1 ],
-    [ 3, "Control Dragon", -1 ],
-    [ 3, "Control Giant", -1 ],
-    [ 3, "Control Human", -1 ],
-    [ 3, "Control Plant", -1 ],
-    [ 3, "Control Undead", -1 ],
-    [ 7, "Delusion", -1 ],
+    [ 3, "Animal Control", -1 ],
+    [ 3, "Dragon Control", -1 ],
+    [ 3, "Giant Control", -1 ],
+    [ 3, "Human Control", -1 ],
+    [ 3, "Plant Control", -1 ],
+    [ 3, "Undead Control", -1 ],
     [ 3, "Diminution", -1 ],
     [ 4, "ESP", -1 ],
     [ 4, "Fire Resistance", -1 ],
@@ -325,6 +324,7 @@ potiontable = [
     [ 3, "Polymorph Self", -1 ],
     [ 8, "Speed", -1 ],
     [ 3, "Treasure Finding", -1 ]
+    [ 7, "Delusion", -1 ],
 ]
 
 scrolltable = [
@@ -582,6 +582,9 @@ def genpotion(cclass, level):
         rc = Dice.tableroller(potiontable)
         while rc[2] != -1 and rc[2] != cclass:
             rc = Dice.tableroller(potiontable)
+        if rc[1] == "Delusion":
+            rc2 = Dice.tableroller(potiontable)
+            rc = [ rc[0], "Delusion (%s)" % rc2[1], rc[2] ]
     return rc[1]
 
 def genscroll(cclass, level):
@@ -634,7 +637,7 @@ def hitpointblock(hplst):
 
     for hp in hplst:
 
-        row = [ "<p class='HitPointBlock'>HP %d" % hp ]
+        row = [ "<p class='HPCheckBoxes'>HP %d" % hp ]
 
         # hit point boxes
         n = hp // 5
@@ -663,9 +666,9 @@ def showcharacter(character):
     if type(character.hp) is int:
         res.append("HP %d," % character.hp)
     res.append("#At 1, Dam %s\n" % character.damage)
-    res.append("(%s)" % statstring(character.stats))
+    res.append(statstring(character.stats))
     if character.spells is not None:
-        res.append("<p class='Text Body'>Spells:")
+        res.append("<p class='MonsterBlock Body'>Spells:")
         res.append(string.join(character.spells, ", "))
     items = []
     if character.armor:
@@ -680,7 +683,7 @@ def showcharacter(character):
     if character.scroll:
         items.append(character.scroll)
     if items:
-        res.append("<p class='Text Body'>Equipment:")
+        res.append("<p class='MonsterBlock Body'>Equipment:")
     res.append(string.join(items, ", "))
 
     return string.join(res, "\n")
@@ -698,9 +701,9 @@ def block(character):
         % (character.ac, character.damage, character.movement, character.morale))
     ss = statstring(character.stats, 1).strip()
     if ss:
-        res.append("<p class='Text Body'>(%s)" % ss)
+        res.append("<p class='MonsterBlock'>%s" % ss)
     if character.spells is not None:
-        res.append("<p class='Text Body'>Spells:")
+        res.append("<p class='MonsterBlock Body'>Spells:")
         res.append(string.join(character.spells, ", "))
     items = []
     if character.armor:
@@ -715,7 +718,7 @@ def block(character):
     if character.scroll:
         items.append(character.scroll)
     if items:
-        res.append("<p class='Text Body'>Equipment:")
+        res.append("<p class='MonsterBlock Body'>Equipment:")
     res.append(string.join(items, ", "))
 
     res.append(hitpointblock(character.hp))
