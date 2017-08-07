@@ -323,7 +323,7 @@ potiontable = [
     [ 2, "Poison", -1 ],
     [ 3, "Polymorph Self", -1 ],
     [ 8, "Speed", -1 ],
-    [ 3, "Treasure Finding", -1 ]
+    [ 3, "Treasure Finding", -1 ],
     [ 7, "Delusion", -1 ],
 ]
 
