@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2016 Chris Gonnerman
+# Copyright 2007-2018 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -36,37 +36,25 @@ import Treasure, Dice, Adventurer, NPCs, Items, Traps, Monsters
 adventurer = Adventurer.generate
 bandit = NPCs.generate
 
-version = "Version 1.1 (Core Rules Release 107 - Provisional)"
+version = "Version 1.1 (Core Rules Release 107)"
 
 ##############################################################################
 #  Tables and Supporting Functions
 ##############################################################################
 
-randenc_level1 = [
-    0,
-    (1, adventurer, "NPC Adventurer Party", 1),
-    (1, bandit, "Bandits", "b"),
-]
+randenc = {
 
-randenc_level2 = [
-    0,
-    (1, adventurer, "NPC Adventurer Party", 2),
-]
+    1: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 1),
+        (1, bandit, "Bandits", "b"),
+    ],
 
-randenc_level3 = [
-    0,
-]
+    2: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 2),
+    ],
 
-randenc_level45 = [
-    0,
-]
-
-randenc_level67 = [
-    0,
-]
-
-randenc_level8 = [
-    0,
 ]
 
 for key in Monsters.monsters.keys():
@@ -74,30 +62,12 @@ for key in Monsters.monsters.keys():
     lvl = monster["dungeonlevel"]
     if type(lvl) is int:
         lvl = (lvl,)
-    if 1 in lvl:
-        randenc_level1.append((1, key, monster))
-    elif 2 in lvl:
-        randenc_level2.append((1, key, monster))
-    elif 3 in lvl:
-        randenc_level3.append((1, key, monster))
-    elif 4 in lvl:
-        randenc_level45.append((1, key, monster))
-    elif 6 in lvl:
-        randenc_level67.append((1, key, monster))
-    elif 8 in lvl:
-        randenc_level8.append((1, key, monster))
+    for l in lvl:
+        if l > 0:
+            if l not in randenc:
+                randenc[l] = [ 0 ]
+            randenc[l].append((2, key, monster))
 
-randenc_select = [
-    None,
-    randenc_level1,
-    randenc_level2,
-    randenc_level3,
-    randenc_level45,
-    randenc_level45,
-    randenc_level67,
-    randenc_level67,
-    randenc_level8,
-]
 
 def treasureformat(tr):
     trlst = []
@@ -114,11 +84,13 @@ def treasureformat(tr):
         trlst.append(nm)
     return trlst
 
+
 def null_fn(row, level):
     if row[3]:
         trlst = treasureformat(Treasure.Treasure("U%d" % level))
         return "<p class='Text Body'>" + row[2] + " with Treasure: " + string.join(trlst, ", ")
     return "<p class='Text Body'>" + row[2]
+
 
 def trap_fn(row, level):
     trap = "<p class='Text Body'>Trap: %s" % Dice.tableroller(Traps.traptable)[1]
@@ -128,11 +100,16 @@ def trap_fn(row, level):
         treasure = " with Treasure: %s" % string.join(trlst, ", ")
     return trap + treasure
 
+
 statblock_fmt = "%(num)s %(name)s: AC %(ac)s, HD %(hitdice)s, #At %(noatt)s, Dam %(dam)s, Mv %(mv)s, Sv %(sv)s, Ml %(ml)s"
+
 
 def monster_fn(row, level):
     level = min(level, 8)
-    rand_tbl = randenc_select[level]
+    if level in randenc:
+        rand_tbl = randenc[level]
+    else:
+        rand_tbl = [ 0 ]
     contents = Dice.tableroller(rand_tbl)
     treasure = ""
     if type(contents[1]) is type(""): # it's a monster

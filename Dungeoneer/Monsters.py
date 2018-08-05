@@ -45,6 +45,7 @@ monsters = {
         "ml": 7,
         "tt": "U",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Ape, Carnivorous": {
         "name": "Carnivorous Ape",
@@ -61,6 +62,7 @@ monsters = {
         "ml": 7,
         "tt": "None",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Basilisk": {
         "name": "Basilisk",
@@ -76,7 +78,8 @@ monsters = {
         "sv": "F6",
         "ml": 9,
         "tt": "F",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Bear, Cave": {
         "name": "Cave Bear",
@@ -92,7 +95,8 @@ monsters = {
         "sv": "F7",
         "ml": 9,
         "tt": "None",
-        "dungeonlevel": 4,
+        "dungeonlevel": (4, 5),
+        "encounterlevel": (4, 5),
     },
     "Black Pudding": {
         "name": "Black Pudding",
@@ -112,6 +116,7 @@ monsters = {
         "ml": 12,
         "tt": "None",
         "dungeonlevel": (6, 8),
+        "encounterlevel": (6, 8),
     },
     "Bee, Giant": {
         "name": "Giant Bee",
@@ -128,6 +133,7 @@ monsters = {
         "ml": 9,
         "tt": "Special",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Beetle, Giant Bombardier": {
         "name": "Giant Bombardier Beetle",
@@ -144,6 +150,7 @@ monsters = {
         "ml": 8,
         "tt": "None",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Beetle, Giant Tiger": {
         "name": "Giant Tiger Beetle",
@@ -160,6 +167,7 @@ monsters = {
         "ml": 9,
         "tt": "U",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Bugbear": {
         "name": "Bugbear",
@@ -176,6 +184,7 @@ monsters = {
         "ml": 9,
         "tt": ("B", "L", "M"),
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Caecilia, Giant": {
         "name": "Giant Caecilia",
@@ -191,7 +200,8 @@ monsters = {
         "sv": "F3",
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": (4, 6),
+        "dungeonlevel": (4, 5, 6, 7),
+        "encounterlevel": (4, 5, 6, 7),
     },
     "Chimera": {
         "name": "Chimera",
@@ -208,6 +218,7 @@ monsters = {
         "ml": 9,
         "tt": "F",
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Cockatrice": {
         "name": "Cockatrice",
@@ -223,7 +234,8 @@ monsters = {
         "sv": "F5",
         "ml": 7,
         "tt": "D",
-        "dungeonlevel": 4,
+        "dungeonlevel": (4, 5),
+        "encounterlevel": (4, 5),
     },
     "Displacer": {
         "name": "Displacer",
@@ -239,7 +251,8 @@ monsters = {
         "sv": "F6",
         "ml": 8,
         "tt": "D",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Doppleganger": {
         "name": "Doppleganger",
@@ -256,6 +269,7 @@ monsters = {
         "ml": 10,
         "tt": "E",
         "dungeonlevel": (3, 4),
+        "encounterlevel": (3, 4),
     },
     "Fly, Giant": {
         "name": "Giant Fly",
@@ -272,6 +286,7 @@ monsters = {
         "ml": 8,
         "tt": "None",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Gargoyle": {
         "name": "Gargoyle",
@@ -288,6 +303,7 @@ monsters = {
         "ml": 11,
         "tt": "C",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Gelatinous Cube": {
         "name": "Gelatinous Cube",
@@ -304,6 +320,7 @@ monsters = {
         "ml": 12,
         "tt": "V",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Ghoul": {
         "name": "Ghoul",
@@ -320,6 +337,7 @@ monsters = {
         "ml": 9,
         "tt": "B",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Giant, Hill": {
         "name": "Hill Giant",
@@ -336,6 +354,7 @@ monsters = {
         "ml": 8,
         "tt": ("E", (1, 8, 0, 1000), "GP"),
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Giant, Stone": {
         "name": "Stone Giant",
@@ -352,6 +371,7 @@ monsters = {
         "ml": 9,
         "tt": ("E", (1, 8, 0, 1000), "GP"),
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Gnoll": {
         "name": "Gnoll",
@@ -368,6 +388,7 @@ monsters = {
         "ml": 8,
         "tt": ("D", "K"),
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Goblin": {
         "name": "Goblin",
@@ -384,6 +405,7 @@ monsters = {
         "ml": 7,
         "tt": "C",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Gray Ooze": {
         "name": "Gray Ooze",
@@ -400,6 +422,7 @@ monsters = {
         "ml": 12,
         "tt": "None",
         "dungeonlevel": (2, 3, 4),
+        "encounterlevel": (2, 3, 4),
     },
     "Green Slime": {
         "name": "Green Slime",
@@ -416,6 +439,7 @@ monsters = {
         "ml": 12,
         "tt": "None",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Hellhound, 3 HD": {
         "name": "Hellhound",
@@ -431,7 +455,8 @@ monsters = {
         "sv": "F3",
         "ml": 9,
         "tt": "C",
-        "dungeonlevel": 0,
+        "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Hellhound, 4 HD": {
         "name": "Hellhound",
@@ -448,6 +473,7 @@ monsters = {
         "ml": 9,
         "tt": "C",
         "dungeonlevel": 4,
+        "encounterlevel": 4,
     },
     "Hellhound, 5 HD": {
         "name": "Hellhound",
@@ -463,7 +489,8 @@ monsters = {
         "noapp": (2, 4, 0),
         "ml": 9,
         "tt": "C",
-        "dungeonlevel": 0,
+        "dungeonlevel": 5,
+        "encounterlevel": 5,
     },
     "Hellhound, 6 HD": {
         "name": "Hellhound",
@@ -479,7 +506,8 @@ monsters = {
         "noapp": (2, 4, 0),
         "ml": 9,
         "tt": "C",
-        "dungeonlevel": 0,
+        "dungeonlevel": 6,
+        "encounterlevel": 6,
     },
     "Hellhound, 7 HD": {
         "name": "Hellhound",
@@ -495,7 +523,8 @@ monsters = {
         "noapp": (2, 4, 0),
         "ml": 9,
         "tt": "C",
-        "dungeonlevel": 0,
+        "dungeonlevel": 7,
+        "encounterlevel": 7,
     },
     "Hobgoblin": {
         "name": "Hobgoblin",
@@ -512,6 +541,7 @@ monsters = {
         "ml": 8,
         "tt": ("D", "K"),
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Hydra, 5 Headed": {
         "name": "Hydra, 5 Headed",
@@ -527,7 +557,8 @@ monsters = {
         "noapp": (0, 0, 1),
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 0,
+        "dungeonlevel": 5,
+        "encounterlevel": 0,
     },
     "Hydra, 6 Headed": {
         "name": "Hydra, 6 Headed",
@@ -544,6 +575,7 @@ monsters = {
         "ml": 9,
         "tt": "B",
         "dungeonlevel": 6,
+        "encounterlevel": (6, 7),
     },
     "Hydra, 7 Headed": {
         "name": "Hydra, 7 Headed",
@@ -559,7 +591,8 @@ monsters = {
         "sv": "F7",
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 8,
+        "dungeonlevel": (7, 8),
+        "encounterlevel": 8,
     },
     "Hydra, 8 Headed": {
         "name": "Hydra, 8 Headed",
@@ -575,7 +608,8 @@ monsters = {
         "noapp": (0, 0, 1),
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 0,
+        "dungeonlevel": 8,
+        "encounterlevel": 0,
     },
     "Hydra, 9 Headed": {
         "name": "Hydra, 9 Headed",
@@ -591,7 +625,8 @@ monsters = {
         "noapp": (0, 0, 1),
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 0,
+        "dungeonlevel": 9,
+        "encounterlevel": 0,
     },
     "Hydra, 10 Headed": {
         "name": "Hydra, 10 Headed",
@@ -607,7 +642,8 @@ monsters = {
         "noapp": (0, 0, 1),
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 0,
+        "dungeonlevel": 10,
+        "encounterlevel": 0,
     },
     "Hydra, 11 Headed": {
         "name": "Hydra, 11 Headed",
@@ -623,7 +659,8 @@ monsters = {
         "noapp": (0, 0, 1),
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 0,
+        "dungeonlevel": 11,
+        "encounterlevel": 0,
     },
     "Hydra, 12 Headed": {
         "name": "Hydra, 12 Headed",
@@ -639,7 +676,8 @@ monsters = {
         "noapp": (0, 0, 1),
         "ml": 9,
         "tt": "B",
-        "dungeonlevel": 0,
+        "dungeonlevel": 12,
+        "encounterlevel": 0,
     },
     "Kobold": {
         "name": "Kobold",
@@ -656,6 +694,7 @@ monsters = {
         "ml": 6,
         "tt": "C",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Lizard Man": {
         "name": "Lizard Man",
@@ -672,6 +711,7 @@ monsters = {
         "ml": 11,
         "tt": "D",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Lycanthrope, Wereboar": {
         "name": "Wereboar",
@@ -688,6 +728,7 @@ monsters = {
         "ml": 9,
         "tt": "C",
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Lycanthrope, Wererat": {
         "name": "Wererat",
@@ -704,6 +745,7 @@ monsters = {
         "ml": 8,
         "tt": "C",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Lycanthrope, Weretiger": {
         "name": "Weretiger",
@@ -719,7 +761,8 @@ monsters = {
         "sv": "F5",
         "ml": 9,
         "tt": "C",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Lycanthrope, Werewolf": {
         "name": "Werewolf",
@@ -735,7 +778,8 @@ monsters = {
         "sv": "F4",
         "ml": 8,
         "tt": "C",
-        "dungeonlevel": 4,
+        "dungeonlevel": (4, 5),
+        "encounterlevel": (4, 5),
     },
     "Minotaur": {
         "name": "Minotaur",
@@ -751,7 +795,8 @@ monsters = {
         "sv": "F6",
         "ml": 11,
         "tt": "C",
-        "dungeonlevel": 4,
+        "dungeonlevel": (4, 5),
+        "encounterlevel": (4, 5),
     },
     "Mummy": {
         "name": "Mummy",
@@ -767,7 +812,8 @@ monsters = {
         "sv": "F5",
         "ml": 12,
         "tt": "D",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Ochre Jelly": {
         "name": "Ochre Jelly",
@@ -783,7 +829,8 @@ monsters = {
         "sv": "F5",
         "ml": 12,
         "tt": "None",
-        "dungeonlevel": 4,
+        "dungeonlevel": (4, 5),
+        "encounterlevel": (4, 5),
     },
     "Ogre": {
         "name": "Ogre",
@@ -800,6 +847,7 @@ monsters = {
         "ml": 10,
         "tt": ("C", (1, 20, 0, 100), "GP"),
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Orc": {
         "name": "Orc",
@@ -816,6 +864,7 @@ monsters = {
         "ml": 8,
         "tt": "D",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Owlbear": {
         "name": "Owlbear",
@@ -831,7 +880,8 @@ monsters = {
         "sv": "F5",
         "ml": 9,
         "tt": "C",
-        "dungeonlevel": (4, 6),
+        "dungeonlevel": (4, 5, 6, 7),
+        "encounterlevel": (4, 5, 6, 7),
     },
     "Purple Worm, 11 HD": {
         "name": "Purple Worm",
@@ -848,6 +898,7 @@ monsters = {
         "ml": 10,
         "tt": "None",
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Purple Worm, 12 HD": {
         "name": "Purple Worm",
@@ -863,7 +914,8 @@ monsters = {
         "sv": "F6",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 12,
+        "encounterlevel": 0,
     },
     "Purple Worm, 13 HD": {
         "name": "Purple Worm",
@@ -879,7 +931,8 @@ monsters = {
         "sv": "F7",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 13,
+        "encounterlevel": 0,
     },
     "Purple Worm, 14 HD": {
         "name": "Purple Worm",
@@ -895,7 +948,8 @@ monsters = {
         "sv": "F7",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 14,
+        "encounterlevel": 0,
     },
     "Purple Worm, 15 HD": {
         "name": "Purple Worm",
@@ -911,7 +965,8 @@ monsters = {
         "sv": "F8",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 15,
+        "encounterlevel": 0,
     },
     "Purple Worm, 16 HD": {
         "name": "Purple Worm",
@@ -927,7 +982,8 @@ monsters = {
         "sv": "F8",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 16,
+        "encounterlevel": 0,
     },
     "Purple Worm, 17 HD": {
         "name": "Purple Worm",
@@ -943,7 +999,8 @@ monsters = {
         "sv": "F9",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 17,
+        "encounterlevel": 0,
     },
     "Purple Worm, 18 HD": {
         "name": "Purple Worm",
@@ -959,7 +1016,8 @@ monsters = {
         "sv": "F9",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 18,
+        "encounterlevel": 0,
     },
     "Purple Worm, 19 HD": {
         "name": "Purple Worm",
@@ -975,7 +1033,8 @@ monsters = {
         "sv": "F10",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 19,
+        "encounterlevel": 0,
     },
     "Purple Worm, 20 HD": {
         "name": "Purple Worm",
@@ -991,7 +1050,8 @@ monsters = {
         "sv": "F10",
         "ml": 10,
         "tt": "None",
-        "dungeonlevel": 0,
+        "dungeonlevel": 20,
+        "encounterlevel": 0,
     },
     "Rust Monster": {
         "name": "Rust Monster",
@@ -1007,7 +1067,8 @@ monsters = {
         "sv": "F5",
         "ml": 7,
         "tt": "None",
-        "dungeonlevel": (4, 6),
+        "dungeonlevel": (4, 5, 6, 7),
+        "encounterlevel": (4, 5, 6, 7),
     },
     "Salamander, Flame": {
         "name": "Flame Salamander",
@@ -1024,6 +1085,7 @@ monsters = {
         "ml": 8,
         "tt": "F",
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Salamander, Frost": {
         "name": "Frost Salamander",
@@ -1040,6 +1102,7 @@ monsters = {
         "ml": 9,
         "tt": "E",
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Scorpion, Giant": {
         "name": "Scorpion, Giant",
@@ -1055,7 +1118,8 @@ monsters = {
         "sv": "F2",
         "ml": 11,
         "tt": "None",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Shadow": {
         "name": "Shadow",
@@ -1072,6 +1136,24 @@ monsters = {
         "ml": 12,
         "tt": "F",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
+    },
+    "Shrieker": {
+        "name": "Shrieker",
+        "ac": 13,
+        "daggers": 0,
+        "asterisk": 0,
+        "stars": 0,
+        "hd": (3, 8, 0),
+        "noatt": "Special",
+        "dam": "None",
+        "mv": "5'",
+        "noapp": (1, 8, 0),
+        "sv": "F1",
+        "ml": 12,
+        "tt": "None",
+        "dungeonlevel": (1, 2, 3, 4, 5, 6, 7, 8),
+        "encounterlevel": 0,
     },
     "Skeleton": {
         "name": "Skeleton",
@@ -1088,6 +1170,7 @@ monsters = {
         "ml": 12,
         "tt": "None",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Snake, Pit Viper": {
         "name": "Pit Viper",
@@ -1104,6 +1187,7 @@ monsters = {
         "ml": 7,
         "tt": "None",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Snake, Spitting Cobra": {
         "name": "Spitting Cobra",
@@ -1120,6 +1204,7 @@ monsters = {
         "ml": 7,
         "tt": "None",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Spectre": {
         "name": "Spectre",
@@ -1135,7 +1220,8 @@ monsters = {
         "sv": "F6",
         "ml": 11,
         "tt": "E",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Spider, Giant Black Widow": {
         "name": "Giant Black Widow Spider",
@@ -1152,6 +1238,7 @@ monsters = {
         "ml": 8,
         "tt": "None",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Spider, Giant Crab": {
         "name": "Giant Crab Spider",
@@ -1168,6 +1255,7 @@ monsters = {
         "ml": 7,
         "tt": "None",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Stirge": {
         "name": "Stirge",
@@ -1184,6 +1272,7 @@ monsters = {
         "ml": 9,
         "tt": "D",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Tentacle Worm": {
         "name": "Tentacle Worm",
@@ -1200,6 +1289,7 @@ monsters = {
         "ml": 9,
         "tt": "B",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Troglodyte": {
         "name": "Troglodyte",
@@ -1216,6 +1306,7 @@ monsters = {
         "ml": 9,
         "tt": "A",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
     "Troll": {
         "name": "Troll",
@@ -1231,7 +1322,8 @@ monsters = {
         "sv": "F6",
         "ml": 10,
         "tt": "D",
-        "dungeonlevel": 6,
+        "dungeonlevel": (6, 7),
+        "encounterlevel": (6, 7),
     },
     "Vampire, 7 HD": {
         "name": "Vampire",
@@ -1248,6 +1340,7 @@ monsters = {
         "ml": 11,
         "tt": "F",
         "dungeonlevel": 8,
+        "encounterlevel": 8,
     },
     "Vampire, 8 HD": {
         "name": "Vampire",
@@ -1263,7 +1356,8 @@ monsters = {
         "sv": "F8",
         "ml": 11,
         "tt": "F",
-        "dungeonlevel": 0,
+        "dungeonlevel": 9,
+        "encounterlevel": 0,
     },
     "Vampire, 9 HD": {
         "name": "Vampire",
@@ -1279,7 +1373,8 @@ monsters = {
         "sv": "F9",
         "ml": 11,
         "tt": "F",
-        "dungeonlevel": 0,
+        "dungeonlevel": 10,
+        "encounterlevel": 0,
     },
     "Wight": {
         "name": "Wight",
@@ -1296,6 +1391,7 @@ monsters = {
         "ml": 12,
         "tt": "B",
         "dungeonlevel": 3,
+        "encounterlevel": 3,
     },
     "Wolf": {
         "name": "Wolf",
@@ -1312,6 +1408,7 @@ monsters = {
         "ml": 8,
         "tt": "None",
         "dungeonlevel": 1,
+        "encounterlevel": 1,
     },
     "Wraith": {
         "name": "Wraith",
@@ -1327,7 +1424,8 @@ monsters = {
         "sv": "F4",
         "ml": 12,
         "tt": "E",
-        "dungeonlevel": 4,
+        "dungeonlevel": (4, 5),
+        "encounterlevel": (4, 5),
     },
     "Zombie": {
         "name": "Zombie",
@@ -1344,6 +1442,7 @@ monsters = {
         "ml": 12,
         "tt": "None",
         "dungeonlevel": 2,
+        "encounterlevel": 2,
     },
 }
 
