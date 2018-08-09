@@ -55,7 +55,7 @@ randenc = {
         (1, adventurer, "NPC Adventurer Party", 2),
     ],
 
-]
+}
 
 for key in Monsters.monsters.keys():
     monster = Monsters.monsters[key]
