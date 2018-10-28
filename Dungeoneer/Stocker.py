@@ -55,6 +55,40 @@ randenc = {
         (1, adventurer, "NPC Adventurer Party", 2),
     ],
 
+    3: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 3),
+    ],
+
+    4: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 4),
+    ],
+
+    5: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 5),
+    ],
+
+    6: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 6),
+    ],
+
+    7: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 7),
+    ],
+
+    8: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 8),
+    ],
+
+    9: [
+        0,
+        (1, adventurer, "NPC Adventurer Party", 9),
+    ],
 }
 
 for key in Monsters.monsters.keys():
