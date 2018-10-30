@@ -31,7 +31,7 @@
 
 import string
 
-import Treasure, Dice, Adventurer, NPCs, Items, Traps, Monsters
+import Treasure, Dice, Adventurer, NPCs, Items, Traps, Monsters, Rooms
 
 adventurer = Adventurer.generate
 bandit = NPCs.generate
@@ -200,6 +200,7 @@ def monster_fn(row, level):
             treasure = "with Treasure"
     return "%s<p class='Text Body'>%s" % (monster, treasure)
 
+
 dungeon_table = [
     0,
     (16, null_fn, "Empty", 0),
@@ -218,13 +219,15 @@ def makedungeon(level, rooms, first = 1):
     body.append("<p class='Text Body'>\n<b>%d Rooms on Level %d</b>" % (rooms, level))
 
     for i in range(rooms):
+        roomtype = Dice.tableroller(Rooms.roomtypes)
         row = Dice.tableroller(dungeon_table)
         contents = row[1](row, level)
         items = []
         if Dice.D(1, 2) == 1 or row[2] == "Empty":
             for j in range(Dice.D(1, 3)) or row[2] == "Empty":
                 items.append(Dice.tableroller(Items.itemtable)[1])
-        body.append("<p class='Text Body'>\n<b>Room %d:</b> %s\n<p class='Text Body'>\n%s" % (i+first, string.join(items, ", "), contents))
+        body.append("<p class='Text Body'>\n<b>%d. %s:</b> %s\n<p class='Text Body'>\n%s"
+            % (i+first, roomtype[0], string.join(items, ", "), contents))
 
     return string.join(body, "\n")
 
