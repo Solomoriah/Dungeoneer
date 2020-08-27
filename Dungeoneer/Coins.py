@@ -37,11 +37,11 @@ import Dice
 import _Treasure
 
 _kinds = {
-    "CP": ("Copper Pieces",     .01),
-    "SP": ("Silver Pieces",     .1),
-    "EP": ("Electrum Pieces",  0.5),
-    "GP": ("Gold Pieces",      1.0),
-    "PP": ("Platinum Pieces",  5.0),
+    "cp": ("Copper Pieces",     .01),
+    "sp": ("Silver Pieces",     .1),
+    "ep": ("Electrum Pieces",  0.5),
+    "gp": ("Gold Pieces",      1.0),
+    "pp": ("Platinum Pieces",  5.0),
 }
 
 class Coin(_Treasure.Item):

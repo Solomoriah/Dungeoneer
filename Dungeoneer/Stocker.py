@@ -227,7 +227,7 @@ def makedungeon(level, rooms, first = 1):
             for j in range(Dice.D(1, 3)) or row[2] == "Empty":
                 items.append(Dice.tableroller(Items.itemtable)[1])
         body.append("<p class='Text Body'>\n<b>%d. %s:</b> %s\n<p class='Text Body'>\n%s"
-            % (i+first, roomtype[0], string.join(items, ", "), contents))
+            % (i+first, roomtype[1], string.join(items, ", "), contents))
 
     return string.join(body, "\n")
 

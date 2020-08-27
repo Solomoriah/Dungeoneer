@@ -45,7 +45,7 @@ statnames = (
     ( "WIS", "Wisdom" ),
     ( "DEX", "Dexterity" ),
     ( "CON", "Constitution" ),
-    ( "CHR", "Charisma" ),
+    ( "CHA", "Charisma" ),
 )
 
 levels = (
