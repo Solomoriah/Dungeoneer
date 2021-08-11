@@ -31,7 +31,7 @@
 
 monsters = {
     "Aboleth": {
-        "name": "",
+        "name": "Aboleth",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -51,7 +51,7 @@ monsters = {
         "frequency": 10,
     },
     "Aboleth (Skum)": {
-		"name": "",
+	"name": "Skum",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -71,7 +71,7 @@ monsters = {
         "frequency": 10,
     },
     "Allip": {
-		"name": "",
+	"name": "Allip",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -91,7 +91,7 @@ monsters = {
         "frequency": 10,
     },
     "Ankheg": {
-		"name": "",
+	"name": "Ankheg",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -111,7 +111,7 @@ monsters = {
         "frequency": 10,
     },
     "Ant Lion, Giant": {
-		"name": "",
+	"name": "Giant Ant Lion",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -131,7 +131,7 @@ monsters = {
         "frequency": 10,
     },
     "Anubian": {
-		"name": "",
+	"name": "Anubian",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -151,7 +151,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Bonobo": {
-		"name": "",
+	"name": "Bonobo Ape",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -171,7 +171,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Carnivorous Snow": {
-		"name": "",
+	"name": "Carnivorous Snow Ape",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -191,7 +191,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Chimpanzee": {
-		"name": "",
+	"name": "Chimpanzee",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -211,7 +211,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Gigantopithecus": {
-		"name": "",
+	"name": "Gigantopithecus Ape",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -231,7 +231,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Girallon": {
-		"name": "",
+	"name": "Girallon",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -251,7 +251,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Gorilla": {
-		"name": "",
+	"name": "Gorilla",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -271,7 +271,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Orangutan, 2HD": {
-		"name": "",
+	"name": "Orangutan",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -291,7 +291,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Orangutan, 3HD": {
-		"name": "",
+	"name": "Orangutan",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -311,7 +311,7 @@ monsters = {
         "frequency": 10,
     },
     "Ape, Winged": {
-		"name": "",
+	"name": "Winged Ape",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -331,7 +331,7 @@ monsters = {
         "frequency": 10,
     },
     "Aranea": {
-		"name": "",
+	"name": "Aranea",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -351,7 +351,7 @@ monsters = {
         "frequency": 10,
     },
     "Armorollo": {
-		"name": "",
+	"name": "Armorollo",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -371,7 +371,7 @@ monsters = {
         "frequency": 10,
     },
     "Badger, Giant": {
-		"name": "",
+	"name": "Giant Badger",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -391,7 +391,7 @@ monsters = {
         "frequency": 10,
     },
     "Banshee": {
-		"name": "",
+	"name": "Banshee",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -411,7 +411,7 @@ monsters = {
         "frequency": 10,
     },
     "Barghest": {
-		"name": "",
+	"name": "Barghest",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -431,7 +431,7 @@ monsters = {
         "frequency": 10,
     },
     "Bat, Giant Flying Fox": {
-		"name": "",
+	"name": "Giant Flying Fox Bat",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -451,7 +451,7 @@ monsters = {
         "frequency": 10,
     },
     "Behir": {
-		"name": "",
+	"name": "Behir",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -471,7 +471,7 @@ monsters = {
         "frequency": 10,
     },
     "Bisren": {
-		"name": "",
+	"name": "Bisren",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -491,7 +491,7 @@ monsters = {
         "frequency": 10,
     },
     "Blade Spirit (Common)": {
-		"name": "",
+	"name": "Blade Spirit",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -511,7 +511,7 @@ monsters = {
         "frequency": 10,
     },
     "Blade Spirit (Greater)": {
-		"name": "",
+	"name": "Greater Blade Spirit",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -531,7 +531,7 @@ monsters = {
         "frequency": 10,
     },
     "Bog Crone": {
-		"name": "",
+	"name": "Crone Bog",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -551,7 +551,7 @@ monsters = {
         "frequency": 10,
     },
     "Boggart": {
-		"name": "",
+	"name": "Boggart",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -571,7 +571,7 @@ monsters = {
         "frequency": 10,
     },
     "Boglin, 1HD": {
-		"name": "",
+	"name": "Boglin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -591,7 +591,7 @@ monsters = {
         "frequency": 10,
     },
     "Boglin, 2HD": {
-		"name": "",
+	"name": "Boglin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -611,7 +611,7 @@ monsters = {
         "frequency": 10,
     },
     "Boglin, 3HD": {
-		"name": "",
+	"name": "Boglin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -631,7 +631,7 @@ monsters = {
         "frequency": 10,
     },
     "Boglin, 4HD": {
-		"name": "",
+	"name": "Boglin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -651,7 +651,7 @@ monsters = {
         "frequency": 10,
     },
     "Boglin, 5HD": {
-		"name": "",
+	"name": "Boglin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -671,7 +671,7 @@ monsters = {
         "frequency": 10,
     },
     "Bone Horror (Common)": {
-		"name": "",
+	"name": "Bone Horror",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -691,7 +691,7 @@ monsters = {
         "frequency": 10,
     },
     "Bone Horror (Greater": {
-		"name": "",
+	"name": "Bone Horror",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -711,7 +711,7 @@ monsters = {
         "frequency": 10,
     },
     "Bronze Bird": {
-		"name": "",
+	"name": "Bronze Bird",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -731,7 +731,7 @@ monsters = {
         "frequency": 10,
     },
     "Brownie": {
-		"name": "",
+	"name": "Brownie",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -751,7 +751,7 @@ monsters = {
         "frequency": 10,
     },
     "Bulette": {
-		"name": "",
+	"name": "Bulette",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -771,7 +771,7 @@ monsters = {
         "frequency": 10,
     },
     "Bunyip": {
-		"name": "",
+	"name": "Bunyip",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -791,7 +791,7 @@ monsters = {
         "frequency": 10,
     },
     "Cadaver": {
-		"name": "",
+	"name": "Cadaver",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -811,7 +811,7 @@ monsters = {
         "frequency": 10,
     },
     "Canein": {
-		"name": "",
+	"name": "Canein",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -831,7 +831,7 @@ monsters = {
         "frequency": 10,
     },
     "Celestial, Solar": {
-		"name": "",
+	"name": "Solar Celestial",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -851,7 +851,7 @@ monsters = {
         "frequency": 10,
     },
     "Chasenet": {
-		"name": "",
+	"name": "Chasenet",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -871,7 +871,7 @@ monsters = {
         "frequency": 10,
     },
     "Chelonian": {
-		"name": "",
+	"name": "Chelonian",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -891,7 +891,7 @@ monsters = {
         "frequency": 10,
     },
     "Choker": {
-		"name": "",
+	"name": "Choker",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -911,7 +911,7 @@ monsters = {
         "frequency": 10,
     },
     "Cloaker": {
-		"name": "",
+	"name": "Cloaker",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -931,7 +931,7 @@ monsters = {
         "frequency": 10,
     },
     "Cockroach (Giant)": {
-		"name": "",
+	"name": "Giant Cockroach",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -951,7 +951,7 @@ monsters = {
         "frequency": 10,
     },
     "Cockroach (Balroach)": {
-		"name": "",
+	"name": "Balroach",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -971,7 +971,7 @@ monsters = {
         "frequency": 10,
     },
     "Cockroach (Giant Ghoul)": {
-		"name": "",
+	"name": "Giant Ghoul Cockroach",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -991,7 +991,7 @@ monsters = {
         "frequency": 10,
     },
     "Couatl": {
-		"name": "",
+	"name": "Couatl",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1011,7 +1011,7 @@ monsters = {
         "frequency": 10,
     },
     "Crypt Dweller": {
-		"name": "",
+	"name": "Crypt Dweller",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1031,7 +1031,7 @@ monsters = {
         "frequency": 10,
     },
     "Cu-Sidhe (Common)": {
-		"name": "",
+	"name": "Cu-Sidhe",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1051,7 +1051,7 @@ monsters = {
         "frequency": 10,
     },
     "Cu-Sidhe (Special)": {
-		"name": "",
+	"name": "Special Cu-Sidhe",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1071,7 +1071,7 @@ monsters = {
         "frequency": 10,
     },
     "Darkmantle": {
-		"name": "",
+	"name": "Darkmantle",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1091,7 +1091,7 @@ monsters = {
         "frequency": 10,
     },
     "Death Dragon": {
-		"name": "",
+	"name": "Death Dragon",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1111,7 +1111,7 @@ monsters = {
         "frequency": 10,
     },
     "Delver": {
-		"name": "",
+	"name": "Delver",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1131,7 +1131,7 @@ monsters = {
         "frequency": 10,
     },
     "Derej Cat": {
-		"name": "",
+	"name": "Derej Cat",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1151,7 +1151,7 @@ monsters = {
         "frequency": 10,
     },
     "Derej Cobra": {
-		"name": "",
+	"name": "Derej Cobra",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1171,7 +1171,7 @@ monsters = {
         "frequency": 10,
     },
     "Derej Mongoose": {
-		"name": "",
+	"name": "Derej Mongoose",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1191,7 +1191,7 @@ monsters = {
         "frequency": 10,
     },
     "Derej Rat": {
-		"name": "",
+	"name": "Derej Rat",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1211,7 +1211,7 @@ monsters = {
         "frequency": 10,
     },
     "Desert Worm": {
-		"name": "",
+	"name": "Desert Worm",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1231,7 +1231,7 @@ monsters = {
         "frequency": 10,
     },
     "Dinosaur, Anklyosaurus": {
-		"name": "",
+	"name": "Anklyosaurus",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1251,7 +1251,7 @@ monsters = {
         "frequency": 10,
     },
     "Dinosaur, Compsognathus": {
-		"name": "",
+	"name": "Compsognathus",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1271,7 +1271,7 @@ monsters = {
         "frequency": 10,
     },
     "Dinosaur, Raptor (Deinonychus)": {
-		"name": "",
+	"name": "Deinonychus",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1291,7 +1291,7 @@ monsters = {
         "frequency": 10,
     },
     "Dinosaur, Raptor (Velociraptor)": {
-		"name": "",
+	"name": "Velociraptor",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1311,7 +1311,7 @@ monsters = {
         "frequency": 10,
     },
     "Dolphin": {
-		"name": "",
+	"name": "Dolphin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1331,7 +1331,7 @@ monsters = {
         "frequency": 10,
     },
     "Dragonne": {
-		"name": "",
+	"name": "Dragonne",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1351,7 +1351,7 @@ monsters = {
         "frequency": 10,
     },
     "Drat": {
-		"name": "",
+	"name": "Drat",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1371,7 +1371,7 @@ monsters = {
         "frequency": 10,
     },
     "Draugr": {
-		"name": "",
+	"name": "Draugr",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1391,7 +1391,7 @@ monsters = {
         "frequency": 10,
     },
     "Eel, Common": {
-		"name": "",
+	"name": "Eel",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1411,7 +1411,7 @@ monsters = {
         "frequency": 10,
     },
     "Eel, Giant, 2HD": {
-		"name": "",
+	"name": "Giant Eel",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1431,7 +1431,7 @@ monsters = {
         "frequency": 10,
     },
     "Eel, Giant, 4HD": {
-		"name": "",
+	"name": "Giant Eel",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1451,7 +1451,7 @@ monsters = {
         "frequency": 10,
     },
     "Eel, Giant, 6HD": {
-		"name": "",
+	"name": "Giant Eel",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1471,7 +1471,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Cold (Staff)": {
-		"name": "",
+	"name": "Cold Elemental (Staff)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1491,7 +1491,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Cold (Device)": {
-		"name": "",
+	"name": "Cold Elemental (Device)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1511,7 +1511,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Cold (Spell)": {
-		"name": "",
+	"name": "Cold Elemental (Spell)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1531,7 +1531,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Lightning (Staff)": {
-		"name": "",
+	"name": "Lightning Elemental (Staff)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1551,7 +1551,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Lightning (Device)": {
-		"name": "",
+	"name": "Lightning Elemental (Device)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1571,7 +1571,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Lightning (Spell)": {
-		"name": "",
+	"name": "Lightning Elemental (Spell)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1591,7 +1591,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Metal (Staff)": {
-		"name": "",
+	"name": "Metal Elemental (Staff)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1611,7 +1611,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Metal (Device)": {
-		"name": "",
+	"name": "Metal Elemental (Device)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1631,7 +1631,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Metal (Spell)": {
-		"name": "",
+	"name": "Metal Elemental (Spell)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1651,7 +1651,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Wood (Staff)": {
-		"name": "",
+	"name": "Wood Elemental (Staff)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1671,7 +1671,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Wood (Device)": {
-		"name": "",
+	"name": "Wood Elemental (Device)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1691,7 +1691,7 @@ monsters = {
         "frequency": 10,
     },
     "Elemental, Wood (Spell)": {
-		"name": "",
+	"name": "Wood Elemental (Spell)",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1711,7 +1711,7 @@ monsters = {
         "frequency": 10,
     },
     "Elephant, Shovel Tusk": {
-		"name": "",
+	"name": "Shovel Tusk Elephant",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1731,7 +1731,7 @@ monsters = {
         "frequency": 10,
     },
     "Ettercap": {
-		"name": "",
+	"name": "Ettercap",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1751,7 +1751,7 @@ monsters = {
         "frequency": 10,
     },
     "Ettin": {
-		"name": "",
+	"name": "Ettin",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1771,7 +1771,7 @@ monsters = {
         "frequency": 10,
     },
     "Faun": {
-		"name": "",
+	"name": "Faun",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1791,7 +1791,7 @@ monsters = {
         "frequency": 10,
     },
     "Faun (Ibix)": {
-		"name": "",
+	"name": "Ibix",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1811,7 +1811,7 @@ monsters = {
         "frequency": 10,
     },
     "Flederkatze": {
-		"name": "",
+	"name": "Flederkatze",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1831,7 +1831,7 @@ monsters = {
         "frequency": 10,
     },
     "Flying Man-of-War": {
-		"name": "",
+	"name": "Flying Man-of-War",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1851,7 +1851,7 @@ monsters = {
         "frequency": 10,
     },
     "Frost Worm": {
-		"name": "",
+	"name": "Frost Worm",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1871,7 +1871,7 @@ monsters = {
         "frequency": 10,
     },
     "Gerbelaine": {
-		"name": "",
+	"name": "Gerbelaine",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1891,7 +1891,7 @@ monsters = {
         "frequency": 10,
     },
     "Gibbering Mouther": {
-		"name": "",
+	"name": "Gibbering Mouther",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1911,7 +1911,7 @@ monsters = {
         "frequency": 10,
     },
     "Glyptodon": {
-		"name": "",
+	"name": "Glyptodon",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1931,7 +1931,7 @@ monsters = {
         "frequency": 10,
     },
     "Great Orb of Eyes": {
-		"name": "",
+	"name": "Great Orb of Eyes",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1950,8 +1950,8 @@ monsters = {
         "encounterlevel": 3,
         "frequency": 10,
     },
-	"Grick": {
-		"name": "",
+    "Grick": {
+	"name": "Grick",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1970,8 +1970,8 @@ monsters = {
         "encounterlevel": 3,
         "frequency": 10,
     },
-	"Grimlock": {
-		"name": "",
+    "Grimlock": {
+	"name": "Grimlock",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -1990,8 +1990,8 @@ monsters = {
         "encounterlevel": 3,
         "frequency": 10,
     },
-	"Guard Fern": {
-		"name": "",
+    "Guard Fern": {
+	"name": "Guard Fern",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -2010,8 +2010,8 @@ monsters = {
         "encounterlevel": 3,
         "frequency": 10,
     },
-	"Gump": {
-		"name": "",
+    "Gump": {
+	"name": "Gump",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -4671,7 +4671,7 @@ monsters = {
         "frequency": 10,
     },
 	"Zombie, Leper": {
-		"name": "",
+	"name": "",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -4691,7 +4691,7 @@ monsters = {
         "frequency": 10,
     },
 	"Zombraire": {
-		"name": "",
+	"name": "Zombraire",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
@@ -4711,7 +4711,7 @@ monsters = {
         "frequency": 10,
     },
 	"Zombraire (Skeletaire)": {
-		"name": "",
+	"name": "Skeletaire",
         "ac": ,
         "daggers": 0,
         "asterisk": 0,
