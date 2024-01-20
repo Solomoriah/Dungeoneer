@@ -102,6 +102,7 @@ class Pirate(Character):
             c.potion = genpotion(c.clas, c.level)
             c.scroll = genscroll(c.clas, c.level)
 
+
 def magicarmor(c, chance):
     if Dice.D(1, 100) > min(95, c.level * chance):
         return
@@ -111,12 +112,14 @@ def magicarmor(c, chance):
     c.armor = "%s +%d" % (c.armor, bonus)
     c.armorvalue = c.armorvalue + bonus
 
+
 def magicweapon(c, chance):
     if Dice.D(1, 100) > min(95, c.level * chance):
         return
     bonus = Dice.tableroller(meleeweaponbonus)[1]
     c.meleeweapon = "%s %s" % (c.meleeweapon, bonus)
     c.damage = "%s %s" % (c.damage, bonus)
+
 
 def bandits():
 
@@ -181,6 +184,7 @@ def bandits():
 
     return party
 
+
 def pirates():
 
     party = []
@@ -219,6 +223,7 @@ def pirates():
 
     return party
 
+
 def generate(typ):
     if typ == "b":
         party = bandits()
@@ -226,9 +231,11 @@ def generate(typ):
         party = pirates()
     return showparty(party)
 
+
 if __name__ == "__main__":
 
     party = bandits()
     print showparty(party)
+
 
 # end of file.

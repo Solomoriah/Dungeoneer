@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2022 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,8 +29,10 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import string, random
+
+import random
 import Spells, Dice
+
 
 # *******************************************************************************************************
 # Table Definitions
@@ -61,6 +63,7 @@ levels = (
     ( 9, 9, 8, 10 ),
     ( 11, 10, 9, 11 ),
 )
+
 
 # names are courtesy of the Dragonsfoot Book of Names available from www.dragonsfoot.org
 
@@ -199,6 +202,7 @@ names = ( "A'kk", "Aarkosh", "Aarne", "Aazad", "Aban", "Abbad", "Abbas", "Abedne
 "Wimbly", "Wixem", "Wofare", "Wolfmoon", "Wolfram", "Wolvenmore", "Woodrider", "Woodrow", "Woserit", "Wrine",
 "Wyllymyr", "Wynnich", "Yar", "Yato", "Yazzi", "Ynywyth", "Yrjana", "Yrjo", "Ysbrand", "Yuiel",
 "Zaagan", "Zarine", "Zatelli", "Zeuth", "Zilas", "Zinnebor", "Zook", "Zorill", "Zyggy" )
+
 
 hitdice = (
     ( 6, 1 ),
@@ -421,6 +425,15 @@ miscmagictable = [
 # *******************************************************************************************************
 # Functions
 
+
+def itemlist(l):
+    return ", ".join(l)
+
+
+def spelllist(l):
+    return "<b>%s</b>" % (", ".join(map(lambda s: s.lower(), l)))
+
+
 def makename():
     if Dice.D(1, 100) <= 25:
         # 2 names
@@ -428,6 +441,7 @@ def makename():
     else:
         # 1 name
         return random.choice(names)
+
 
 # *******************************************************************************************************
 # Object Constructors
@@ -545,6 +559,7 @@ class Character:
 
         self.calc()
 
+
 def statstring(stats, abbrev = 0):
     rc = []
     for i in range(6):
@@ -556,7 +571,8 @@ def statstring(stats, abbrev = 0):
                 rc.append("(+%d)" % sb)
             elif sb < 0:
                 rc.append("(%d)" % sb)
-    return string.join(rc, " ")
+    return " ".join(rc)
+
 
 def genmeleeweapon(cclass, level):
 
@@ -574,7 +590,11 @@ def genmeleeweapon(cclass, level):
         bonus = " " + row[1]
         damage = damage + bonus
 
-    return [ wpn[1] + bonus, wpn[2], damage ]
+    if bonus:
+        return [ "<b>%s %s</b>" % (wpn[1], bonus), wpn[2], damage ]
+    else:
+        return [ wpn[1] + bonus, wpn[2], damage ]
+
 
 def genpotion(cclass, level):
     rc = [ 0, "", 0 ]
@@ -587,15 +607,17 @@ def genpotion(cclass, level):
             rc = [ rc[0], "Delusion (%s)" % rc2[1], rc[2] ]
     return rc[1]
 
+
 def genscroll(cclass, level):
     if Dice.D(1, 100) < (level * 3):
         scroll = Dice.tableroller(scrolltable[cclass])[1]
         if type(scroll) is tuple:
             scrollspells = Spells.genscroll(scroll[0], scroll[1])
-            scroll = "Scroll of %s Spells: %s" \
-                   % (classnames[cclass], string.join(scrollspells, ", "))
+            scroll = "scroll of %s spells: %s" \
+                   % (classnames[cclass].lower(), spelllist(scrollspells))
         return scroll
     return ""
+
 
 def genarmor(cclass, level):
 
@@ -609,9 +631,10 @@ def genarmor(cclass, level):
     if Dice.D(1, 100) < min(95, level * chance):
         typ = Dice.tableroller(armortypes[cclass])
         row = Dice.tableroller(armorbonus)
-        return [ "%s +%d" % (typ[1], row[1]), typ[2] + row[1], min(typ[3] + 10, 40) ]
+        return [ "<b>%s +%d</b>" % (typ[1], row[1]), typ[2] + row[1], min(typ[3] + 10, 40) ]
 
     return defaultarmor[cclass]
+
 
 def genshield(cclass, level):
 
@@ -623,10 +646,11 @@ def genshield(cclass, level):
     # is it magical?
     if Dice.D(1, 100) < min(95, level * 5):
         row = Dice.tableroller(armorbonus)
-        arm[1] = "%s +%d" % (arm[1], row[1])
+        arm[1] = "<b>%s +%d</b>" % (arm[1], row[1])
         arm[2] = arm[2] + row[1]
 
     return arm
+
 
 def hitpointblock(hplst):
 
@@ -637,20 +661,39 @@ def hitpointblock(hplst):
 
     for hp in hplst:
 
-        row = [ "<p class='HPCheckBoxes'>HP %d" % hp ]
+        hprows = []
 
         # hit point boxes
         n = hp // 5
         r = hp % 5
 
-        for i in range(n):
-            row.append("&#9744;" * 5)
+        hprow = []
+        while n:
+            hprow.append("&#9744;" * 5)
+            n -= 1
+            if len(hprow) > 3:
+                hprows.append(" ".join(hprow))
+                hprow = []
+        if r:
+            hprow.append("&#9744;" * r)
 
-        row.append("&#9744;" * r)
+        if hprow:
+            hprows.append(" ".join(hprow))
 
-        rc.append(string.join(row, " "))
+        if hprows:
+            hprows[0] = "".join([
+                "<tr><td style='width: 2em;'>HP</td>",
+                "<td style='width: 3em; text-align: right; padding-right: 1em;'>%d</td>" % hp,
+                "<td>%s</td></tr>" % hprows[0],
+            ])
+            for i in range(1, len(hprows)):
+                hprows[i] = "<tr><td></td><td></td><td>%s</td></tr>" % hprows[i]
+            hprows = [ "<table>\n%s\n</table>" % "\n".join(hprows) ]
 
-    return string.join(rc, "\n")
+        rc.append("\n".join(hprows))
+
+    return "\n".join(rc)
+
 
 def showcharacter(character):
 
@@ -669,7 +712,7 @@ def showcharacter(character):
     res.append(statstring(character.stats))
     if character.spells is not None:
         res.append("<p class='MonsterBlock Body'>Spells:")
-        res.append(string.join(character.spells, ", "))
+        res.append(spelllist(character.spells))
     items = []
     if character.armor:
         items.append(character.armor)
@@ -679,15 +722,19 @@ def showcharacter(character):
     if character.ringpro > 0:
         items.append("Ring of Protection +%d" % character.ringpro)
     if character.potion:
-        items.append("Potion of %s" % character.potion)
+        items.append("<b>Potion of %s</b>" % character.potion)
     if character.scroll:
-        items.append(character.scroll)
+        if "Scroll" in character.scroll:
+            items.append("<b>%s</b>" % character.scroll)
+        else:
+            items.append(character.scroll)
     if items:
         res.append("<p class='MonsterBlock Body'>Equipment:")
-    res.append(string.join(items, ", "))
+    res.append(itemlist(items))
 
-    return string.join(res, "\n")
+    return "\n".join(res)
     
+
 def block(character):
 
     res = [ "<p>" ]
@@ -704,7 +751,7 @@ def block(character):
         res.append("<p class='MonsterBlock'>%s" % ss)
     if character.spells is not None:
         res.append("<p class='MonsterBlock Body'>Spells:")
-        res.append(string.join(character.spells, ", "))
+        res.append(spelllist(character.spells))
     items = []
     if character.armor:
         items.append(character.armor)
@@ -712,18 +759,21 @@ def block(character):
         items.append(character.shield)
     items.append(character.meleeweapon)
     if character.ringpro > 0:
-        items.append("Ring of Protection +%d" % character.ringpro)
+        items.append("<b>Ring of Protection +%d</b>" % character.ringpro)
     if character.potion:
-        items.append("Potion of %s" % character.potion)
+        items.append("<b>Potion of %s</b>" % character.potion)
     if character.scroll:
-        items.append(character.scroll)
+        if "Scroll" in character.scroll:
+            items.append("<b>%s</b>" % character.scroll)
+        else:
+            items.append(character.scroll)
     if items:
         res.append("<p class='MonsterBlock Body'>Equipment:")
-    res.append(string.join(items, ", "))
+    res.append(itemlist(items))
 
     res.append(hitpointblock(character.hp))
 
-    return string.join(res, "\n")
+    return "\n".join(res)
     
 def showparty(party):
 
@@ -732,7 +782,7 @@ def showparty(party):
     for character in party:
         res.append(block(character))
 
-    return string.join(res, "\n")
+    return "\n".join(res)
 
 def miscitems(totlvl):
 
@@ -749,7 +799,7 @@ def miscitems(totlvl):
 
 def showitems(items):
     if items:
-        return "<p><b>Additional Miscellaneous Magic:</b> %s" % string.join(items, ", ")
+        return "<p><b>Additional Miscellaneous Magic:</b> %s" % spelllist(items)
     return ""
 
 def generate(level):
