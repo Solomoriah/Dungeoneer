@@ -744,7 +744,7 @@ def block(character):
         res.append("<b>%s:</b> %s," % (character.name, rcl))
     else:
         res.append("<b>%d %s:</b>" % (character.noapp, rcl))
-    res.append("AC %d, #At 1, Dam %s, Mv %d', Ml %d" 
+    res.append("AC %d, #At 1, Dam %s, Mv %d', ML %d" 
         % (character.ac, character.damage, character.movement, character.morale))
     ss = statstring(character.stats, 1).strip()
     if ss:

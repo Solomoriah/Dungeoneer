@@ -45,7 +45,7 @@ _kinds = {
 }
 
 class Coin(_Treasure.Item):
-    def __init__(self, kind = "GP", qty = 1):
+    def __init__(self, kind = "gp", qty = 1):
         _Treasure.Item.__init__(self)
         self.cat = "Coin"
         self.fullcat = self.fullcat + "." + self.cat
@@ -69,5 +69,6 @@ class Coin(_Treasure.Item):
 
 if __name__ == '__main__':
     print Coin()
+
 
 # end of file.

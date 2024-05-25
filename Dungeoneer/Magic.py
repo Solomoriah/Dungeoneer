@@ -347,6 +347,7 @@ _non_weapon_item_table = [
 ]
 
 class Magic(_Treasure.Item):
+
     __magic_switch = {
         "AN": _magic_table,
         "PO": _potion_table,
@@ -359,6 +360,7 @@ class Magic(_Treasure.Item):
         "AR": _armor_type_table,
         "WE": _weapon_type_table,
     }
+
     def __init__(self, kind = "Any"):
         _Treasure.Item.__init__(self)
         self.cat = "Magic"
@@ -367,6 +369,7 @@ class Magic(_Treasure.Item):
         self.name = self.shortname = row[1]
         if len(row) > 3:
             self.desc = row[3]
+
     def __str__(self):
         s = self.cat + ": "
         if self.qty != 1:
@@ -395,5 +398,6 @@ if __name__ == '__main__':
             print Magic(t)
     else:
         print Magic()
+
 
 # end of file.

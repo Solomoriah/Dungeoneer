@@ -135,7 +135,7 @@ def trap_fn(row, level):
     return trap + treasure
 
 
-statblock_fmt = "%(num)s %(name)s: AC %(ac)s, HD %(hitdice)s, #At %(noatt)s, Dam %(dam)s, Mv %(mv)s, Sv %(sv)s, Ml %(ml)s"
+statblock_fmt = "%(num)s %(name)s: AC %(ac)s, HD %(hitdice)s, #At %(noatt)s, Dam %(dam)s, Mv %(mv)s, Sv %(sv)s, ML %(ml)s"
 
 
 def monster_fn(row, level):
@@ -224,7 +224,7 @@ def makedungeon(level, rooms, first = 1):
         contents = row[1](row, level)
         items = []
         if Dice.D(1, 2) == 1 or row[2] == "Empty":
-            for j in range(Dice.D(1, 3)) or row[2] == "Empty":
+            for j in range(Dice.D(1, 3)):
                 items.append(Dice.tableroller(Items.itemtable)[1])
         body.append("<p class='Text Body'>\n<b>%d. %s:</b> %s\n<p class='Text Body'>\n%s"
             % (i+first, roomtype[1], string.join(items, ", "), contents))
