@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,9 +33,8 @@
 #  Treasure.py -- generate treasures for Basic Fantasy RPG
 ###############################################################################
 
-import Gems, Art, Coins, Magic, Unknown
-import Dice
-import string
+from . import Gems, Art, Coins, Magic, Unknown, Dice
+
 
 def combine(lst):
     lst.sort()
@@ -51,12 +50,14 @@ def combine(lst):
                     lst[i+1] = None
                     hits += 1
         if hits:
-            lst = filter(lambda x: x is not None, lst)
+            lst = list(filter(lambda x: x is not None, lst))
     return lst
+
 
 def _gen_coins(argtup):
     kind, n, s, b, mul = argtup
     return [ Coins.Coin(kind, (Dice.D(n, s, b) * mul)) ]
+
 
 def _gen_gems(argtup):
     n, s, b, mul = argtup
@@ -66,6 +67,7 @@ def _gen_gems(argtup):
         lst = lst + [ Gems.Gem() ]
     return lst
 
+
 def _gen_art(argtup):
     n, s, b, mul = argtup
     lst = []
@@ -73,6 +75,7 @@ def _gen_art(argtup):
     for i in range(qty):
         lst = lst + [ Art.Art() ]
     return lst
+
 
 def __gen_magic(argtup):
     kind, n, s, b, mul = argtup
@@ -82,6 +85,7 @@ def __gen_magic(argtup):
         lst = lst + [ Magic.Magic(kind) ]
     return lst
 
+
 def _gen_magic(argtup):
     if type(argtup) is type([]):
         lst = []
@@ -90,6 +94,7 @@ def _gen_magic(argtup):
         return lst
     else:
         return __gen_magic(argtup)
+
 
 _treasure_table = {
 
@@ -353,8 +358,8 @@ _treasure_table['U7'] = _treasure_table['U67']
 
 def Types():
     types = _treasure_table.keys()
-    ones = filter(lambda x: len(x) == 1, types)
-    mults = filter(lambda x: len(x) > 1, types)
+    ones = list(filter(lambda x: len(x) == 1, types))
+    mults = list(filter(lambda x: len(x) > 1, types))
     ones.sort()
     mults.sort()
     return ones + mults
@@ -362,7 +367,7 @@ def Types():
 def Treasure(typ):
     tr = []
     try:
-        tbl = _treasure_table[string.upper(typ)]
+        tbl = _treasure_table[typ.upper()]
         for i in tbl:
             if Dice.D(1, 100, 0) <= i[0]:
                 tr = tr + i[1](i[2])
@@ -391,23 +396,24 @@ def Factory(args):
         for n in range(mult):
             tr += Treasure(i)
 
-    types = string.join(types, " ")
+    types = " ".join(types)
 
     if types[-1] == ',':
         types = types[:-1]
 
     return (types.upper(), combine(tr))
 
+
 if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 2:
-        print "Usage:  Treasure.py treasuretype [ treasuretype ... ]"
+        print("Usage:  Treasure.py treasuretype [ treasuretype ... ]")
         sys.exit(0)
 
     types, tr = Factory(sys.argv[1:])
 
-    print "Treasure Type " + string.upper(types)
+    print("Treasure Type " + types.upper())
 
     vtot = 0.0
     ocat = ''
@@ -417,16 +423,17 @@ if __name__ == "__main__":
     qty_fmt = "%" + str(qty_len) + "d"
     for t in tr:
         if t.cat != ocat:
-            print t.cat
+            print(t.cat)
         ocat = t.cat
         if t.value != 0:
-            print "   ", qty_fmt % t.qty, t.name, t.value, "GP ea.", \
-                t.value * t.qty, "GP total"
+            print("   ", qty_fmt % t.qty, t.name, t.value, "GP ea.",
+                t.value * t.qty, "GP total")
         else:
-            print "   ", qty_fmt % t.qty, t.name
+            print("   ", qty_fmt % t.qty, t.name)
         for i in t.desc:
-            print "       ", i
+            print("       ", i)
         vtot = vtot + (t.qty * t.value)
-    print "----- Total Value", vtot, "GP\n"
+    print("----- Total Value", vtot, "GP\n")
+
 
 # end of script.

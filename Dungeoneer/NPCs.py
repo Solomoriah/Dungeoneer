@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,8 +29,9 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from Adventurer import *
-import Dice
+from .Adventurer import *
+from . import Dice
+
 
 banditarmor = [
     0,
@@ -235,7 +236,7 @@ def generate(typ):
 if __name__ == "__main__":
 
     party = bandits()
-    print showparty(party)
+    print(showparty(party))
 
 
 # end of file.

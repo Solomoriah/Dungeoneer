@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,6 +34,7 @@
 ###############################################################################
 
 import random
+
 
 Select = random.choice
 
@@ -74,7 +75,7 @@ def MRoll(table):
     """
     while table:
         row = Roll(table)
-        # print "---", row[1]
+        # print("---", row[1])
         if type(row[-1]) is type([]):
             table = row[-1]
         else:
@@ -85,6 +86,7 @@ def MRoll(table):
             row = rc
             table = None
     return row
+
 
 def tablecalc(tableobj):
     """tablecalc() prepares a table for tableroller()
@@ -100,6 +102,7 @@ def tablecalc(tableobj):
     for row in tableobj[1:]:
         s += row[0]
     tableobj[0] = s
+
 
 def tableroller(tableobj):
     """tableroller() selects a row from a weighted table which has been
@@ -118,5 +121,6 @@ def tableroller(tableobj):
             return row
 
     return [ 0, "FELL OUT " + tableobj[0] + " " + orig_r, 0 ]
+
 
 # end of script.

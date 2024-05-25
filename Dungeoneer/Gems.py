@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,8 +33,8 @@
 #  Gems.py -- generate gems
 ###############################################################################
 
-import Dice
-import _Treasure
+from . import Dice, _Treasure
+
 
 _ornamental_stones = [
         'Azurite',          'Banded Agate',
@@ -119,7 +119,8 @@ class Gem(_Treasure.Item):
         if self.value >= 1:
             self.value = int(self.value) * 1.0
 
+
 if __name__ == '__main__':
-    print Gem()
+    print(Gem())
 
 # end of file.

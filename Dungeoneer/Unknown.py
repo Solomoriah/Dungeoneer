@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,8 +33,8 @@
 #  Unknown.py -- handle unknown treasure types
 ###############################################################################
 
-import Dice
-import _Treasure
+from . import Dice, _Treasure
+
 
 class Unknown(_Treasure.Item):
     def __init__(self, typ = None):
@@ -51,6 +51,7 @@ class Unknown(_Treasure.Item):
 
 
 if __name__ == '__main__':
-    print Unknown()
+    print(Unknown())
+
 
 # end of file.

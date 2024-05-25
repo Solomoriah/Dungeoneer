@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,8 +33,8 @@
 #  Coins.py -- generate coinage
 ###############################################################################
 
-import Dice
-import _Treasure
+from . import Dice, _Treasure
+
 
 _kinds = {
     "cp": ("Copper Pieces",     .01),
@@ -67,8 +67,9 @@ class Coin(_Treasure.Item):
 
         return s
 
+
 if __name__ == '__main__':
-    print Coin()
+    print(Coin())
 
 
 # end of file.

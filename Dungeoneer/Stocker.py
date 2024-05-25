@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2018 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,9 +29,8 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import string
+from . import Treasure, Dice, Adventurer, NPCs, Items, Traps, Monsters, Rooms
 
-import Treasure, Dice, Adventurer, NPCs, Items, Traps, Monsters, Rooms
 
 adventurer = Adventurer.generate
 bandit = NPCs.generate
@@ -122,7 +121,7 @@ def treasureformat(tr):
 def null_fn(row, level):
     if row[3]:
         trlst = treasureformat(Treasure.Treasure("U%d" % level))
-        return "<p class='Text Body'>" + row[2] + " with Treasure: " + string.join(trlst, ", ")
+        return "<p class='Text Body'>" + row[2] + " with Treasure: " + ", ".join(trlst)
     return "<p class='Text Body'>" + row[2]
 
 
@@ -131,7 +130,7 @@ def trap_fn(row, level):
     treasure = ""
     if row[3]:
         trlst = treasureformat(Treasure.Treasure("U%d" % level))
-        treasure = " with Treasure: %s" % string.join(trlst, ", ")
+        treasure = " with Treasure: %s" % ", ".join(trlst)
     return trap + treasure
 
 
@@ -164,7 +163,7 @@ def monster_fn(row, level):
             ls = []
             for i in tt:
                 ls.append(str(i))
-            monster["tt"] = string.join(ls, ", ")
+            monster["tt"] = ", ".join(ls)
         else:
             tt = ( monster["tt"], )
         num = monster["noapp"]
@@ -179,7 +178,7 @@ def monster_fn(row, level):
                     treasure = " with Treasure Type %s" % monster[-1]
                 trlst = treasureformat(tr)
                 if not treasure:
-                    treasure = " with Treasure: " + string.join(trlst, ", ")
+                    treasure = " with Treasure: " + ", ".join(trlst)
         monster["num"] = num
         monster = (statblock_fmt % monster)
 
@@ -188,7 +187,7 @@ def monster_fn(row, level):
         for i in range(num):
             hplist.append(Adventurer.hitpointblock(max(1, Dice.D(*hd))))
 
-        monster = monster + string.join(hplist, "\n")
+        monster = monster + "\n".join(hplist)
 
     elif type(contents[1]) != type(""):
         args = contents[3:]
@@ -227,9 +226,9 @@ def makedungeon(level, rooms, first = 1):
             for j in range(Dice.D(1, 3)):
                 items.append(Dice.tableroller(Items.itemtable)[1])
         body.append("<p class='Text Body'>\n<b>%d. %s:</b> %s\n<p class='Text Body'>\n%s"
-            % (i+first, roomtype[1], string.join(items, ", "), contents))
+            % (i+first, roomtype[1], ", ".join(items), contents))
 
-    return string.join(body, "\n")
+    return "\n".join(body)
 
 
 # end of file.

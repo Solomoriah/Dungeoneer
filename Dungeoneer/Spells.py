@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,8 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import random
-import Dice
+from . import Dice
+
 
 spellchart = [
     (0),
@@ -255,12 +256,12 @@ def genspells(clas, level):
         sp = {}
         while n:
             spell = random.choice(tbl[i])
-            if not sp.has_key(spell):
+            if not spell in sp:
                 sp[spell] = 1
             else:
                 sp[spell] += 1
             n -= 1
-        keys = sp.keys()
+        keys = list(sp.keys())
         keys.sort()
         for key in keys:
             if sp[key] > 1:
@@ -269,6 +270,7 @@ def genspells(clas, level):
                 spells.append(key)
             
     return spells
+
 
 # creates a scroll of spells
 

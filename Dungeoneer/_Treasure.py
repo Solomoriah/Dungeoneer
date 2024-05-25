@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,8 +33,8 @@
 #  _Treasure.py -- base functions for treasure generator
 ###############################################################################
 
+from . import Dice
 
-import Dice
 
 categories = {
     "Coin":     0,
@@ -56,12 +56,23 @@ class Item:
         self.fullcat = self.cat = 'Item'
         self.qty = 1
 
-    def __cmp__(self, other):
-        if str(self) < str(other):
-            return -1
-        if str(self) > str(other):
-            return 1
-        return 0
+    def __lt__(self, other):
+        return str(self) < str(other)
+
+    def __gt__(self, other):
+        return str(self) > str(other)
+
+    def __le__(self, other):
+        return str(self) <= str(other)
+
+    def __ge__(self, other):
+        return str(self) >= str(other)
+
+    def __eq__(self, other):
+        return str(self) == str(other)
+
+    def __ne__(self, other):
+        return str(self) != str(other)
 
     def __str__(self):
 

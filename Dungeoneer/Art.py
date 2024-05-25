@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,8 +33,8 @@
 #  Art.py -- generate object of art
 ###############################################################################
 
-import Dice
-import _Treasure
+from . import Dice, _Treasure
+
 
 _art_types_table = [
     (6, "Anklet"),
@@ -64,6 +64,7 @@ _art_types_table = [
     (1, "Tiara"),
 ]
 
+
 class Art(_Treasure.Item):
     def __init__(self):
         _Treasure.Item.__init__(self)
@@ -73,7 +74,9 @@ class Art(_Treasure.Item):
         self.name = self.shortname = row[1]
         self.value = float(Dice.D(2, 8, 0) * 100)
 
+
 if __name__ == '__main__':
-    print Art()
+    print(Art())
+
 
 # end of file.

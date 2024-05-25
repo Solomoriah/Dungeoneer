@@ -1,5 +1,5 @@
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2022 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
 
 
 import random
-import Spells, Dice
+from . import Spells, Dice
 
 
 # *******************************************************************************************************
@@ -774,6 +774,7 @@ def block(character):
     res.append(hitpointblock(character.hp))
 
     return "\n".join(res)
+
     
 def showparty(party):
 
@@ -783,6 +784,7 @@ def showparty(party):
         res.append(block(character))
 
     return "\n".join(res)
+
 
 def miscitems(totlvl):
 
@@ -797,10 +799,12 @@ def miscitems(totlvl):
 
     return items
 
+
 def showitems(items):
     if items:
         return "<p><b>Additional Miscellaneous Magic:</b> %s" % spelllist(items)
     return ""
+
 
 def generate(level):
 
@@ -833,6 +837,7 @@ def generate(level):
 
     return "%s\n%s" % (showparty(party), showitems(items))
 
+
 def single(klass, level):
 
     character = Character(level, klass, actuallevel = 1)
@@ -840,7 +845,9 @@ def single(klass, level):
 
     return showparty([ character ])
 
+
 if __name__ == "__main__":
-    print generate(5)
+    print(generate(5))
+
 
 # end of file.

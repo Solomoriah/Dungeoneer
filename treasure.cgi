@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Basic Fantasy RPG Dungeoneer Suite
-# Copyright 2007-2012 Chris Gonnerman
+# Copyright 2007-2024 Chris Gonnerman
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -36,12 +36,10 @@ import cgi, string, time, traceback, sys
 
 try:
 
-    sys.path.append("/home/newcent/lib/python2.3")
     sys.path.append(".")
 
     from Dungeoneer import Treasure
     import makesite
-    import cgilogger
 
     scriptpath = "treasure.cgi"
 
@@ -142,19 +140,20 @@ try:
         body.append("<input type='text' name='type' value=''>")
         body += header
 
-    print "Content-type: text/html"
-    print "Cache-control: no-cache"
-    print "Expires:", time.asctime(time.gmtime(time.time()))
-    print
+    print("Content-type: text/html")
+    print("Cache-control: no-cache")
+    print("Expires:", time.asctime(time.gmtime(time.time())))
+    print("")
 
     data["body"] = string.join(body, "\n")
 
-    print tmpl * data
+    print(tmpl * data)
 
 except:
-    print "Content-type: text/plain\n"
-    print "<pre>"
+    print("Content-type: text/plain\n")
+    print("<pre>")
     traceback.print_exc(file = sys.stdout)
-    print "</pre>"
+    print("</pre>")
+
 
 # end of file.
